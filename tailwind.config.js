@@ -6,16 +6,19 @@ export default {
   ],
   theme: {
     extend: {
-      color: {
+      colors: {
+        primary: "#5e3bee",
+        black: "#000",
+        overlay: "hsla(0, 0%, 0%, 0.5)",
+        white: "#fff",
+        lightGray: "#ddd",
         darkPurple: "#12164b",
         darkBlue: "#2a76b4",
         lightBlue: "#79b9ff",
-        white: "#fff",
-        lightGray: "#ddd",
       },
       fontFamily: {
-        gameFont: ["Seymour One", "sans-serif"],
-        speechFont: ["Sofia Sans", "sans-serif"]
+        game: ['Seymour One', 'sans-serif'],
+        speech: ['Sofia Sans', 'sans-serif']
       }
     },
   },
