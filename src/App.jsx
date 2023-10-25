@@ -34,6 +34,7 @@ const App = () => {
     }
 
     setCells(squares);
+    console.log(squares)
   };
 
   const restart = () => {
