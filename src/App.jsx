@@ -13,12 +13,34 @@ const App = () => {
     setTurn(!turn);
   };
 
+  const checkForWinner = (squares) => {
+    // console.log(squares);
+
+    // combinations of winning options
+    let combination = {
+      across: [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+      ],
+      down: [
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+      ],
+      diagonal: [
+        [0, 4, 8],
+        [2, 4, 6],
+      ],
+    };
+  };
+
   const handleClick = (num) => {
     // validating
     if (cells[num] !== "") {
       return;
     }
-    
+
     // message toggle for the players
     messageToggle();
 
@@ -33,8 +55,8 @@ const App = () => {
       setTurn(true);
     }
 
+    checkForWinner(squares);
     setCells(squares);
-    console.log(squares)
   };
 
   const restart = () => {
