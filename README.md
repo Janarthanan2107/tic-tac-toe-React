@@ -15,8 +15,7 @@ Follow these steps to get the project up and running on your local machine:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Janarthanan2107/todolist-React.git
-   cd your-react-app
+   https://github.com/Janarthanan2107/tic-tac-toe-React.git
    ```
 
 2. **Install dependencies:**
