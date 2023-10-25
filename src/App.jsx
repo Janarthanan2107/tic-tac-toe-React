@@ -17,6 +17,11 @@ const App = () => {
     // message toggle for the players
     messageToggle();
 
+    // validating
+    if (cells[num] !== "") {
+      return;
+    }
+
     // values on grid
     let squares = [...cells];
 
@@ -28,19 +33,19 @@ const App = () => {
       setTurn(true);
     }
 
-    setCells(squares)
+    setCells(squares);
   };
 
   const restart = () => {
     setTurn(true);
-    setCells(Array(9).fill(''))
+    setCells(Array(9).fill(""));
   };
 
   // cell component
   const Cell = ({ num }) => {
     return (
       <div
-        className="w-[100px] h-[100px] shadow-sm flex justify-center items-center bg-white font-game text-[2rem]"
+        className="w-[100px] h-[100px] shadow-sm flex justify-center items-center bg-white font-game text-[2rem] text-darkPurple"
         onClick={() => handleClick(num)}
       >
         {cells[num]}
