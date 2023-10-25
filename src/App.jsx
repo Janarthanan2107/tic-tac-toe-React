@@ -117,9 +117,9 @@ const App = () => {
         </h1>
 
         {/* game section */}
-        <div className="flex justify-center items-center h-[80vh] gap-[8rem]">
+        <div className="game-section flex justify-center items-center h-[80vh] gap-[8rem]">
           {/* left */}
-          <div className="w-[500px] relative">
+          <div className="left-section w-[500px] relative">
             {/* message */}
             <div className="font-speech text-[2rem]">
               {turn ? (
@@ -132,7 +132,7 @@ const App = () => {
                 </h3>
               )}
             </div>
-            <img src={friends} alt="friends" />
+            <img src={friends} alt="friends"/>
           </div>
 
           {/* right */}
