@@ -100,7 +100,7 @@ const App = () => {
   const Cell = ({ num }) => {
     return (
       <div
-        className="w-[100px] h-[100px] shadow-sm flex justify-center items-center bg-white font-game text-[2rem] text-darkPurple"
+        className="cell w-[100px] h-[100px] shadow-sm flex justify-center items-center bg-white font-game text-[2rem] text-darkPurple"
         onClick={() => handleClick(num)}
       >
         {cells[num]}
