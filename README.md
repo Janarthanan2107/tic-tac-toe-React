@@ -6,7 +6,7 @@ A brief description of your React application.
 
 ## Live Demo
 
-You can access a live demo of this project [here](https://heroic-tartufo-1af71c.netlify.app/).
+You can access a live demo of this project [here](https://delightful-flan-217f40.netlify.app/).
 
 ## Installation
 
