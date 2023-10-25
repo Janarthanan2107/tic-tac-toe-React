@@ -17,7 +17,7 @@ const App = () => {
     // console.log(squares);
 
     // combinations of winning options
-    let combination = {
+    let combinations = {
       across: [
         [0, 1, 2],
         [3, 4, 5],
@@ -33,6 +33,27 @@ const App = () => {
         [2, 4, 6],
       ],
     };
+
+    for (let combo in combinations) {
+      combinations[combo].forEach((pattern) => {
+        // console.log("pattern 0",squares[pattern[0]]);
+        // console.log("pattern 1",squares[pattern[1]]);
+        // console.log("pattern 2",squares[pattern[2]]);
+
+        if (
+          squares[pattern[0]] === "" ||
+          squares[pattern[1]] === "" ||
+          squares[pattern[2]] === ""
+        ) {
+          // do nothing
+        } else if (
+          squares[pattern[0]] === squares[pattern[1]] &&
+          squares[pattern[1]] === squares[pattern[2]]
+        ) {
+          
+        }
+      });
+    }
   };
 
   const handleClick = (num) => {
