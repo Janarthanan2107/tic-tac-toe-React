@@ -12,6 +12,7 @@ export default {
         overlay: "hsla(0, 0%, 0%, 0.5)",
         white: "#fff",
         lightGray: "#ddd",
+        lightDarkPurple: "#69a0dd",
         darkPurple: "#12164b",
         darkBlue: "#2a76b4",
         lightBlue: "#79b9ff",
