@@ -14,13 +14,13 @@ const App = () => {
   };
 
   const handleClick = (num) => {
-    // message toggle for the players
-    messageToggle();
-
     // validating
     if (cells[num] !== "") {
       return;
     }
+    
+    // message toggle for the players
+    messageToggle();
 
     // values on grid
     let squares = [...cells];
