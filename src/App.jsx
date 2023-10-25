@@ -8,6 +8,7 @@ const App = () => {
   // state
   const [turn, setTurn] = useState(true);
   const [cells, setCells] = useState(Array(9).fill(""));
+  const [winner, setWinner] = useState(false);
 
   const messageToggle = () => {
     setTurn(!turn);
@@ -50,7 +51,16 @@ const App = () => {
           squares[pattern[0]] === squares[pattern[1]] &&
           squares[pattern[1]] === squares[pattern[2]]
         ) {
-          
+          // if turn = true ===> that's X
+          if (turn === true) {
+            setTurn(true);
+            setWinner(true);
+
+            // if turn = false ===> that's O
+          } else if (turn === false) {
+            setTurn(false);
+            setWinner(true);
+          }
         }
       });
     }
@@ -83,6 +93,7 @@ const App = () => {
   const restart = () => {
     setTurn(true);
     setCells(Array(9).fill(""));
+    setWinner(false);
   };
 
   // cell component
@@ -113,11 +124,11 @@ const App = () => {
             <div className="font-speech text-[2rem]">
               {turn ? (
                 <h3 className="message absolute top-1 -left-5 animate-bounce p-3 bg-lightDarkPurple rounded-lg">
-                  It's your turn, player X
+                  {winner ? "Nice! I won!" : "It's your turn, player X"}
                 </h3>
               ) : (
                 <h3 className="message absolute top-1 -right-5 animate-bounce p-3 bg-lightDarkPurple rounded-lg">
-                  Now you, player O!
+                  {winner ? "Wohoo! I made it!" : "Now you, player O!"}
                 </h3>
               )}
             </div>
