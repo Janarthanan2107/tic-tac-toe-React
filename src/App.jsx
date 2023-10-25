@@ -7,17 +7,33 @@ import { useState } from "react";
 const App = () => {
   // state
   const [turn, setTurn] = useState(true);
+  const [cells, setCells] = useState(Array(9).fill(""));
 
   const messageToggle = () => {
     setTurn(!turn);
   };
 
   const handleClick = (num) => {
+    // message toggle for the players
     messageToggle();
+
+    // values on grid
+    let squares = [...cells];
+
+    if (turn === true) {
+      squares[num] = "X";
+      setTurn(false);
+    } else {
+      squares[num] = "O";
+      setTurn(true);
+    }
+
+    setCells(squares)
   };
 
   const restart = () => {
-    setTurn(true)
+    setTurn(true);
+    setCells(Array(9).fill(''))
   };
 
   // cell component
@@ -27,7 +43,7 @@ const App = () => {
         className="w-[100px] h-[100px] shadow-sm flex justify-center items-center bg-white font-game text-[2rem]"
         onClick={() => handleClick(num)}
       >
-        {num}
+        {cells[num]}
       </div>
     );
   };
@@ -78,7 +94,10 @@ const App = () => {
                 <Cell num={8} />
               </div>
             </div>
-            <button className="px-4 py-3 mt-5 bg-darkPurple text-white rounded-lg" onClick={restart}>
+            <button
+              className="px-4 py-3 mt-5 bg-darkPurple text-white rounded-lg"
+              onClick={restart}
+            >
               Restart Game
             </button>
           </div>
