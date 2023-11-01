@@ -126,6 +126,7 @@ const App = () => {
           <div className="left-section w-[500px] relative">
             {/* message */}
             <div className="font-speech text-[2rem]">
+            {/* conditional rendering */}
               {turn ? (
                 <h3 className="message absolute top-1 -left-5 animate-bounce p-3 bg-lightDarkPurple rounded-lg">
                   {winner ? "Nice! I won!" : "It's your turn, player X"}
