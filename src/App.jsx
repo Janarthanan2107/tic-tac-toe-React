@@ -15,6 +15,7 @@ const App = () => {
     setTurn(!turn);
   };
 
+  // winner logic
   const checkForWinner = (squares) => {
     // console.log(squares);
 
