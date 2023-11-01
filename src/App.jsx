@@ -10,6 +10,7 @@ const App = () => {
   const [cells, setCells] = useState(Array(9).fill(""));
   const [winner, setWinner] = useState(false);
 
+  // toggle message
   const messageToggle = () => {
     setTurn(!turn);
   };
