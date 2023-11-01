@@ -81,6 +81,7 @@ const App = () => {
     // values on grid
     let squares = [...cells];
 
+    // condition for "x" and "o"
     if (turn === true) {
       squares[num] = "X";
       setTurn(false);
