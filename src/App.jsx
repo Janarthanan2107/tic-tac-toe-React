@@ -37,6 +37,7 @@ const App = () => {
       ],
     };
 
+    // looping the combinations
     for (let combo in combinations) {
       combinations[combo].forEach((pattern) => {
         // console.log("pattern 0",squares[pattern[0]]);
